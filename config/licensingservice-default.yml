@@ -1,9 +1,0 @@
-tracer.property: "I AM THE DEFAULT"
-spring:
-  datasource:
-    name: eagle_eye_local
-    url: jdbc:mysql://127.0.0.1:3306/eagle_eye_local?useSSL=false&serverTimezone=Hongkong&characterEncoding=utf-8&autoReconnect=true&allowPublicKeyRetrieval=true
-    username: root
-    password: 123456
-  jpa:
-    show-sql: true

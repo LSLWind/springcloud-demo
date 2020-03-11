@@ -20,7 +20,7 @@ public class LicenseService {
 
     public License getLicense(String organizationId, String licenseId) {
         License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
-        return license.withComment(config.getExampleProperty());
+        return license;
     }
 
     public List<License> getLicensesByOrg(String organizationId){
@@ -28,7 +28,7 @@ public class LicenseService {
     }
 
     public void saveLicense(License license){
-        license.withId( UUID.randomUUID().toString());
+        license.setLicenseId( UUID.randomUUID().toString());
         licenseRepository.save(license);
     }
     /*为了简洁，省略了其余的代码*/
